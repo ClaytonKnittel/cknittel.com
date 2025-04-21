@@ -1,4 +1,7 @@
 mod app;
+mod body;
+mod header;
+mod page;
 
 use app::App;
 
