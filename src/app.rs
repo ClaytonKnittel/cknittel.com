@@ -9,8 +9,8 @@ pub fn app() -> Html {
 
   html! {
     <>
-      <Header page={(*page).clone()} change_page={move |page_id| page_state.set(page_id)} />
-      <Body page={(*page).clone()} />
+      <Header page={*page} change_page={move |page_id| page_state.set(page_id)} />
+      <Body page={*page} />
     </>
   }
 }
