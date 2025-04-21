@@ -8,6 +8,7 @@ fn header() -> Html {
       <div class={classes!("menu")}>
         <div class={classes!("menuitem")}>{"Home"}</div>
         <div class={classes!("menuitem")}>{"Games"}</div>
+        <div class={classes!("menuitem")}>{"Projects"}</div>
       </div>
     </div>
   }
