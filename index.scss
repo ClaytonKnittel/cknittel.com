@@ -5,31 +5,42 @@ body {
 }
 
 body {
+  background: linear-gradient(to bottom right, #444444, #009a5b);
+  font-size: 1.5rem;
+  font-family: sans-serif;
+
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  color: #fff6d5;
+  text-align: center;
+  flex: 0 1 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.menu {
+  text-align: left;
+}
+
+.menuitem {
+  display: inline-block;
+  padding: 10px;
+}
+
+.menuitem:hover {
+  background-color: red;
+}
+
+.body {
   align-items: center;
   display: flex;
   justify-content: center;
-
-  background: linear-gradient(to bottom right, #444444, #009a5b);
-  font-size: 1.5rem;
-}
-
-main {
-  color: #fff6d5;
-  font-family: sans-serif;
-  text-align: center;
-}
-
-.logo {
-  height: 20em;
-}
-
-.heart:after {
-  content: "❤️";
-
-  font-size: 1.75em;
-}
-
-h1 + .subtitle {
-  display: block;
-  margin-top: -1em;
+  flex: 1 1 auto;
 }

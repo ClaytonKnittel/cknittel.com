@@ -1,12 +1,31 @@
-use yew::prelude::*;
+use yew::{classes, function_component, html, Html};
+
+#[function_component(Header)]
+fn header() -> Html {
+  html! {
+    <div class={classes!("header")}>
+      <div class={classes!("title")}>{ "cknittel.com" }</div>
+      <div class={classes!("menu")}>
+        <div class={classes!("menuitem")}>{"Home"}</div>
+        <div class={classes!("menuitem")}>{"Games"}</div>
+      </div>
+    </div>
+  }
+}
+
+#[function_component(Body)]
+fn body() -> Html {
+  html! {
+    <div class={classes!("body")}>{ "contents" }</div>
+  }
+}
 
 #[function_component(App)]
 pub fn app() -> Html {
   html! {
-    <main>
-      <img class="logo" src="https://yew.rs/img/logo.svg" alt="Yew logo" />
-      <h1>{ "Hello World!" }</h1>
-      <span class="subtitle">{ "from Yew with " }<i class="heart" /></span>
-    </main>
+    <>
+      <Header />
+      <Body />
+    </>
   }
 }
