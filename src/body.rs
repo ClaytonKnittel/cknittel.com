@@ -17,7 +17,5 @@ fn page_contents(page: Page) -> Html {
 
 #[function_component(Body)]
 pub fn body(props: &Props) -> Html {
-  html! {
-    <div class={classes!("body")}>{ page_contents(props.page) }</div>
-  }
+  html! { <div class={classes!("body")}>{ page_contents(props.page) }</div> }
 }
