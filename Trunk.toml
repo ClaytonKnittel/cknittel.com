@@ -1,0 +1,6 @@
+[watch]
+ignore = ["modules/"]
+
+[[hooks]]
+stage = "build"
+command = "./build_submodules.sh"

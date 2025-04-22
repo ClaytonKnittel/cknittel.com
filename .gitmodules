@@ -1,0 +1,3 @@
+[submodule "modules/rain-game"]
+	path = modules/rain-game
+	url = https://github.com/ClaytonKnittel/rain-game.git
