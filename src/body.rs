@@ -1,6 +1,9 @@
 use yew::{classes, function_component, html, Html, Properties};
 
-use crate::page::Page;
+use crate::{
+  page::Page,
+  pages::{games::GamesPage, home::HomePage},
+};
 
 #[derive(Properties, PartialEq)]
 pub struct Props {
@@ -9,8 +12,8 @@ pub struct Props {
 
 fn page_contents(page: Page) -> Html {
   match page {
-    Page::Home => html! { "home" },
-    Page::Games => html! { "games" },
+    Page::Home => html! { <HomePage /> },
+    Page::Games => html! { <GamesPage /> },
     Page::Projects => html! { "projects" },
   }
 }

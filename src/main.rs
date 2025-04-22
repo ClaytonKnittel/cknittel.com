@@ -2,6 +2,7 @@ mod app;
 mod body;
 mod header;
 mod page;
+mod pages;
 
 use app::App;
 
