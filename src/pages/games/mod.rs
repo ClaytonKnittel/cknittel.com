@@ -1,6 +1,7 @@
+mod game;
 mod game_list;
-mod games;
+mod games_page;
 mod page;
 mod rain_game;
 
-pub use games::*;
+pub use games_page::*;
