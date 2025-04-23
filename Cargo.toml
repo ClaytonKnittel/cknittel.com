@@ -22,3 +22,33 @@ opt-level = "s"
 lto = true
 codegen-units = 1
 strip = true
+
+[lints.clippy]
+empty_enum_variants_with_brackets = "warn"
+empty_structs_with_brackets = "warn"
+if_then_some_else_none = "warn"
+let_underscore_must_use = "deny"
+multiple_inherent_impl = "warn"
+needless_raw_strings = "warn"
+panic = "deny"
+precedence = "warn"
+print_stderr = "warn"
+print_stdout = "warn"
+rc_mutex = "deny"
+renamed_function_params = "warn"
+return_and_then = "warn"
+self_named_module_files = "warn"
+std_instead_of_alloc = "warn"
+std_instead_of_core = "warn"
+str_to_string = "warn"
+string_to_string = "warn"
+tests_outside_test_module = "deny"
+
+# Deny all methods which may panic
+disallowed_macros = "deny"
+exit = "deny"
+expect_used = "deny"
+indexing_slicing = "deny"
+unimplemented = "deny"
+unreachable = "deny"
+unwrap_used = "deny"

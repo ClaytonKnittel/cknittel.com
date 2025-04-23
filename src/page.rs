@@ -12,6 +12,7 @@ impl VariantMetadata for Page {
   const VARIANT_NAMES: &'static [&'static str] = Self::VARIANTS;
 
   fn variant_name(&self) -> &'static str {
+    #[allow(clippy::indexing_slicing)]
     Self::VARIANTS[*self as usize]
   }
 }
