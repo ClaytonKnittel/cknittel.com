@@ -15,6 +15,10 @@ body {
   flex-flow: column;
 }
 
+.lockdown {
+  overflow: hidden;
+}
+
 .header {
   font-size: 1.5rem;
   text-align: center;

@@ -1,6 +1,8 @@
 use strum::EnumIter;
 use yew::{classes, function_component, html, Html, Properties};
 
+use crate::web_util::document_body;
+
 #[derive(Clone, Copy, PartialEq, Eq, EnumIter)]
 pub enum Game {
   RainGame,
@@ -33,6 +35,18 @@ pub struct Props {
 
 #[function_component(GameComponent)]
 pub fn game_component(props: &Props) -> Html {
+  yew::use_effect(|| {
+    if let Some(body) = document_body() {
+      body.class_list().add_1("lockdown").ok();
+    }
+
+    || {
+      if let Some(body) = document_body() {
+        body.class_list().remove_1("lockdown").ok();
+      }
+    }
+  });
+
   html! {
     <div class={classes!("game-container")}>
       <iframe class={classes!("game-iframe")} src={props.game.src()} title={props.game.title()} />
