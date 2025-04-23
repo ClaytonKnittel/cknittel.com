@@ -1,5 +1,5 @@
 use strum::EnumIter;
-use yew::{classes, function_component, html, Html, Properties};
+use yew::{classes, function_component, html, use_effect, Html, Properties};
 
 use crate::web_util::document_body;
 
@@ -35,7 +35,7 @@ pub struct Props {
 
 #[function_component(GameComponent)]
 pub fn game_component(props: &Props) -> Html {
-  yew::use_effect(|| {
+  use_effect(|| {
     if let Some(body) = document_body() {
       body.class_list().add_1("lockdown").ok();
     }
