@@ -9,6 +9,10 @@ license = "MIT OR Apache-2.0"
 keywords = ["yew", "trunk"]
 categories = ["gui", "wasm", "web-programming"]
 
+[workspace]
+resolver = "2"
+members = ["server"]
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
 itertools = "0.14.0"
@@ -23,7 +27,10 @@ lto = true
 codegen-units = 1
 strip = true
 
-[lints.clippy]
+[lints]
+workspace = true
+
+[workspace.lints.clippy]
 empty_enum_variants_with_brackets = "warn"
 empty_structs_with_brackets = "warn"
 if_then_some_else_none = "warn"
