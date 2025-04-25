@@ -5,7 +5,7 @@ edition = "2021"
 
 [workspace]
 resolver = "2"
-members = ["server"]
+members = [ "common","server"]
 
 [dependencies]
 itertools = "0.14.0"

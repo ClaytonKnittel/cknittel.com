@@ -1,4 +1,6 @@
-use tracing::info;
+mod ws;
+
+use ws::run_websocket_server;
 
 #[tokio::main]
 async fn main() {
@@ -6,5 +8,9 @@ async fn main() {
     .with_max_level(tracing::Level::INFO)
     .init();
 
-  info!("Server");
+  let result = run_websocket_server().await;
+
+  if let Err(error) = result {
+    tracing::error!("{error}");
+  }
 }

@@ -1,5 +1,5 @@
-disallowed-macros = [
-    { path = "core::assert", reason = "May panic" },
-    { path = "core::assert_eq", reason = "May panic" },
-    { path = "core::assert_ne", reason = "May panic" },
-]
+allow-expect-in-tests = true
+allow-indexing-slicing-in-tests = true
+allow-panic-in-tests = true
+allow-print-in-tests = true
+allow-unwrap-in-tests = true
