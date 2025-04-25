@@ -1,5 +1,10 @@
-#![allow(clippy::print_stderr, clippy::print_stdout)]
+use tracing::info;
 
-fn main() {
-  println!("Server");
+#[tokio::main]
+async fn main() {
+  tracing_subscriber::fmt()
+    .with_max_level(tracing::Level::INFO)
+    .init();
+
+  info!("Server");
 }
