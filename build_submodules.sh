@@ -10,3 +10,5 @@ cd ../..
 
 mkdir -p $TRUNK_STAGING_DIR/games/rain-game
 cp -r modules/rain-game/dist/* $TRUNK_STAGING_DIR/games/rain-game/
+
+cp -r static/* $TRUNK_STAGING_DIR/games/

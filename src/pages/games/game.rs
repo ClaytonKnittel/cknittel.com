@@ -6,24 +6,28 @@ use crate::web_util::document_body;
 #[derive(Clone, Copy, PartialEq, Eq, EnumIter)]
 pub enum Game {
   RainGame,
+  Pico,
 }
 
 impl Game {
   pub const fn mobile_compatible(&self) -> bool {
     match self {
       Game::RainGame => false,
+      Game::Pico => false,
     }
   }
 
   const fn src(&self) -> &'static str {
     match self {
       Game::RainGame => "/games/rain-game/index.html",
+      Game::Pico => "/games/pico/index.html",
     }
   }
 
   pub const fn title(&self) -> &'static str {
     match self {
       Game::RainGame => "Rain Game",
+      Game::Pico => "Pico-8 Test",
     }
   }
 }
